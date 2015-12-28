@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="falldown" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\falldown" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="Images" />
+				<Option object_output="Sources\obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\falldown" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="Images" />
+				<Option object_output="Sources\obj\Release\" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-march=prescott" />
+					<Add option="-Os" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DALLEGRO_STATICLINK" />
+			<Add directory="Includes" />
+			<Add directory="SDL\include\" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="libSDLmain" />
+			<Add library="SDL" />
+			<Add directory="libs" />
+			<Add directory="SDL\lib" />
+		</Linker>
+		<Unit filename="Includes\Sprite.h" />
+		<Unit filename="Includes\balle.h" />
+		<Unit filename="Includes\collision.h" />
+		<Unit filename="Includes\etage.h" />
+		<Unit filename="Includes\etages.h" />
+		<Unit filename="Includes\fps.h" />
+		<Unit filename="Includes\mur.h" />
+		<Unit filename="Includes\render.h" />
+		<Unit filename="Includes\utilitaires.h" />
+		<Unit filename="Sources\Main.cpp" />
+		<Unit filename="Sources\balle.cpp" />
+		<Unit filename="Sources\etage.cpp" />
+		<Unit filename="Sources\etages.cpp" />
+		<Unit filename="Sources\mur.cpp" />
+		<Unit filename="Sources\render_sdl.cpp" />
+		<Unit filename="Sources\utilitaires.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
